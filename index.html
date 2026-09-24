@@ -1,0 +1,168 @@
+<!doctype html>
+<html lang="pt-BR">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+    <title>Formulário de Contato</title>
+
+    <style>
+      * {
+        box-sizing: border-box;
+      }
+
+      body {
+        margin: 0;
+        background: #fff;
+        font-family: Arial, sans-serif;
+        color: #555;
+      }
+
+      .contato {
+        width: 100%;
+        max-width: 340px;
+        margin: 50px auto;
+        padding: 0 10px;
+      }
+
+      .contato h1 {
+        text-align: center;
+        color: #111;
+        font-size: 27px;
+        letter-spacing: 1px;
+        margin-bottom: 45px;
+      }
+
+      .campo {
+        position: relative;
+        margin-bottom: 38px;
+      }
+
+      .campo label {
+        display: inline-block;
+        font-size: 15px;
+        color: #59616b;
+        margin-bottom: 8px;
+      }
+
+      .campo input,
+      .campo textarea {
+        width: 100%;
+        border: none;
+        border-bottom: 3px solid #91a2b8;
+        outline: none;
+        font-size: 15px;
+        color: #555;
+        padding: 4px 5px 8px 5px;
+        font-family: Arial, sans-serif;
+        background: transparent;
+      }
+
+      .campo input::placeholder,
+      .campo textarea::placeholder {
+        color: #999;
+      }
+
+      .campo textarea {
+        height: 55px;
+        resize: none;
+      }
+
+      .recaptcha {
+        border: 1px solid #ddd;
+        width: 100%;
+        height: 84px;
+        display: flex;
+        align-items: center;
+        padding: 12px;
+        margin-top: 10px;
+        margin-bottom: 15px;
+        box-shadow: 0 1px 3px rgba(0, 0, 0, 0.08);
+      }
+
+      .recaptcha input {
+        width: 30px;
+        height: 30px;
+        margin-right: 12px;
+      }
+
+      .recaptcha span {
+        font-size: 14px;
+        color: #333;
+      }
+
+      .botao {
+        width: 100%;
+        height: 56px;
+        border: none;
+        background: #f45112;
+        color: white;
+        font-size: 19px;
+        cursor: pointer;
+        transition: 0.2s;
+      }
+
+      .botao:hover {
+        background: #d94108;
+      }
+    </style>
+  </head>
+
+  <body>
+    <div class="contato">
+      <h1>CONTATOS</h1>
+
+      <form action="https://formspree.io/f/xrpbkdno" method="POST">
+        <div class="campo">
+          <label for="nome">Nome: *</label>
+          <input
+            type="text"
+            id="nome"
+            name="nome"
+            placeholder="Seu nome"
+            required
+          />
+        </div>
+
+        <div class="campo">
+          <label for="email">E-mail: *</label>
+          <input
+            type="email"
+            id="email"
+            name="email"
+            placeholder="Seu e-mail"
+            required
+          />
+        </div>
+
+        <div class="campo">
+          <label for="assunto">Assunto: *</label>
+          <input
+            type="text"
+            id="assunto"
+            name="assunto"
+            placeholder="Indique qual o assunto"
+            required
+          />
+        </div>
+
+        <div class="campo">
+          <label for="mensagem">Mensagem: *</label>
+          <textarea
+            id="mensagem"
+            name="mensagem"
+            placeholder="Digite sua mensagem"
+            required
+          ></textarea>
+        </div>
+
+        <div class="recaptcha">
+          <input type="checkbox" id="robo" name="robo" required />
+          <span>Não sou um robô</span>
+        </div>
+
+        <button type="submit" class="botao">Enviar mensagem</button>
+      </form>
+    </div>
+  </body>
+</html>
